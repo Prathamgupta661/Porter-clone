@@ -1,10 +1,21 @@
 import React from "react";
+import DeliveryPartnerBanner from "../components/DriverParterComponents/DeliveryPartnerBanner";
+import PorterAdvantage from "../components/DriverParterComponents/PorterAdvantage";
+import MakingLifeEasy from "../components/DriverParterComponents/MakingLifeEasy";
+import AdditionalBenefits from "../components/DriverParterComponents/AdditionalBenefits";
+import ChangingLifeOfPeople from "../components/DriverParterComponents/ChangingLifeOfPeople";
+import OwnMultipleVehicles from "../components/DriverParterComponents/OwnMultipleVehicles";
 
 export default function DriverPartners() {
   return (
-    <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <h1>Driver Partners</h1>
-      <p>Coming soon: Full layout and features for Driver Partners page.</p>
+    <div className="mt-15">
+      <DeliveryPartnerBanner />
+      <PorterAdvantage />
+      <MakingLifeEasy />
+      <AdditionalBenefits />
+      <ChangingLifeOfPeople />
+      <OwnMultipleVehicles />
+      {/* You can add more sections here */}
     </div>
   );
 } 
