@@ -20,8 +20,8 @@ const CitiesSection = () => (
         And thanks to you, we are growing each & every day!
       </h1>
       {/* Announcement Bar */}
-      <div className="flex justify-center mb-8">
-        <div className="bg-yellow-400/90 text-black px-6 py-2 rounded border border-yellow-300 font-medium flex items-center gap-2 text-base shadow">
+      <div className="flex justify-center my-10">
+        <div className="bg-gradient-to-r from-[#ffd90039] via-[#ff990048] to-[#ffd90039] text-yellow-400 px-8 py-4 rounded-md border border-yellow-300 font-medium flex items-center gap-2 text-base shadow">
           <span role="img" aria-label="party">🎉</span>
           Marhaba Dubai! We're now live & ready to take care of all your logistical needs.
         </div>

@@ -60,8 +60,8 @@ const TestimonialsSection = () => (
         {testimonials.map((t, idx) => (
           <div
             key={t.name}
-            className={`rounded-2xl p-6 flex flex-col bg-[#181c23] text-white shadow-lg ${
-              idx === 0 ? 'bg-[#181c23]/80 border border-gray-700' : ''
+            className={`rounded-2xl bg-transparent hover:bg-[#181c23]/80 p-6 flex flex-col  text-white shadow-lg ${
+              idx === 0 ? 'bg-transparent hover:bg-[#181c23]/80' : ''
             }`}
           >
             <div className="flex items-center gap-3 mb-2">

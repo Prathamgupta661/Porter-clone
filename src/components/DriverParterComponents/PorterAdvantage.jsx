@@ -22,15 +22,15 @@ const advantages = [
 
 const PorterAdvantage = () => {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-20 bg-white">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12">PORTER ADVANTAGE</h2>
+        <h2 className="text-3xl font-bold mb-20 leading-tight">PORTER ADVANTAGE</h2>
         <div className="flex flex-col md:flex-row justify-center space-y-12 md:space-y-0 md:space-x-8 lg:space-x-16">
           {advantages.map((advantage, index) => (
-            <div key={index} className="max-w-xs mx-auto md:mx-0">
+            <div key={index} className="max-w-xs mx-auto md:mx-5">
               <img src={advantage.icon} alt={advantage.title} className="h-40 mx-auto mb-6" />
-              <h3 className="text-xl font-bold mb-2">{advantage.title}</h3>
-              <p className="text-gray-600">{advantage.description}</p>
+              <h3 className="text-md font-semibold mb-2 text-center">{advantage.title}</h3>
+              <p className="text-gray-600 text-sm text-wrap text-center">{advantage.description}</p>
             </div>
           ))}
         </div>

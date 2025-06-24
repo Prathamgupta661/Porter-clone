@@ -3,9 +3,9 @@ import driver from "../../assets/driverpartner/driver_experience_partner.gif"
 
 const MakingLifeEasy = () => {
   return (
-    <div className="bg-gray-900 text-white py-16">
+    <div className="bg-gray-900 text-white py-20">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12">MAKING YOUR LIFE EASY</h2>
+        <h2 className="text-xl font-bold mb-20 leading-tight">MAKING YOUR LIFE EASY</h2>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:gap-10">
           <div className="md:w-1/2">
             <img 

@@ -60,8 +60,9 @@ const ServicesSection = () => (
             <div className="mt-10 mb-8">
               <h3 className="text-2xl font-bold leading-tight whitespace-pre-line">{service.title}</h3>
             </div>
-            <button className="mt-auto bg-white/30 text-white rounded-full px-6 py-2 flex items-center gap-2 font-semibold backdrop-blur-sm w-fit">
-              <span className="text-xl">→</span>
+            <button className="mt-auto bg-white/30 text-white rounded-full px-6 py-2 flex items-center gap-2 font-semibold backdrop-blur-sm w-fit group">
+              Learn More
+              <span className="text-xl transform transition-transform duration-200 group-hover:translate-x-2">→</span>
             </button>
           </div>
         ))}

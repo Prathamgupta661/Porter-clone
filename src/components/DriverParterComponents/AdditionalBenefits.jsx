@@ -29,15 +29,15 @@ const benefits = [
 
 const AdditionalBenefits = () => {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-20 bg-white">
       <div className="container mx-auto text-center px-4">
-        <h2 className="text-3xl font-bold mb-12">ADDITIONAL BENEFITS</h2>
+        <h2 className="text-3xl font-bold mb-20">ADDITIONAL BENEFITS</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex flex-col items-center">
               <img src={benefit.icon} alt={benefit.title} className="h-32 mx-auto mb-6" />
-              <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              <h3 className="text-md font-semibold mb-2 text-center">{benefit.title}</h3>
+              <p className="text-gray-600 text-sm text-wrap text-center">{benefit.description}</p>
             </div>
           ))}
         </div>

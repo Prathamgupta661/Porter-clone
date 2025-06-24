@@ -7,11 +7,11 @@ import fleetImg from '../../assets/driverpartner/deliverypage.jpeg';
 const DeliveryPartnerBanner = () => {
   return (
     <div 
-      className="bg-cover  py-16 px-4 sm:px-8 lg:px-16 " 
+      className="bg-cover  py-8 px-4 sm:px-8 lg:px-16 " 
       style={{ backgroundImage: `url(${fleetImg})` }}
     >
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
-        <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+        <div className="lg:w-1/2 md:mt-auto text-center lg:text-left mb-10 lg:mb-0">
           <h1 className="text-4xl sm:text-5xl font-bold text-purple-800 mb-4">Have a mini truck or bike?</h1>
           <p className="text-lg text-gray-700">Earn money by fulfilling transportation orders assigned by Porter</p>
         </div>

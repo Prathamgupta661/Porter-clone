@@ -17,25 +17,24 @@ const HeroSection = () => {
       }}
     >
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
-      
+      <div className="absolute inset-0"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-22 ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
-            <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <div className="ml-2 sm:ml-6 md:ml-10 mt-5">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-tight">
                 Delivery hai?
               </h1>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-yellow-400">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 #HoJayega!
               </h1>
             </div>
           </div>
           {/* Responsive white card */}
-          <div className="flex absolute top-[12rem] left-1/2 -translate-x-1/2 w-full max-w-5xl h-fit z-20 px-2">
-            <div className="bg-white rounded-sm shadow-2xl text-gray-800 w-full p-4 md:p-18 flex flex-col md:flex-row items-center justify-around  gap-6">
+          <div className="flex absolute top-[11rem] left-1/2 -translate-x-1/2 w-full max-w-[67rem] h-auto md:h-[19rem] z-20">
+            <div className="bg-white rounded-sm shadow-2xl text-gray-800 w-full p-2 sm:p-4 md:p-10 flex flex-col md:flex-row items-center justify-around gap-6 md:gap-0">
               {/* City Selector */}
-              <div className="absolute top-0 left-1 flex items-center space-x-2 pr-0 md:p-7 border-b md:border-b-0 md:border-r border-gray-200 pb-4 md:pb-5 w-full md:w-auto justify-center md:justify-around">
+              <div className="absolute top-3 sm:top-5 left-2 sm:left-9 flex items-center space-x-2 border-b md:border-b-0 md:border-r border-gray-200 w-full md:w-auto justify-center md:justify-around px-2 sm:px-0">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -49,38 +48,38 @@ const HeroSection = () => {
                 </button>
               </div>
               {/* Service Icons */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pl-0 md:pl-6 justify-between w-full md:w-auto">
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 md:gap-15 pl-0 md:pl-6 w-full md:w-auto mt-20 md:mt-0">
                 <div className="flex flex-col items-center">
-                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2">
-                    <img src={bike} alt="Two Wheelers" className="w-24 h-24 object-contain" />
+                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2 hover:scale-105 transition-transform">
+                    <img src={bike} alt="Two Wheelers" className="w-20 h-20 sm:h-24 object-cover" />
                   </div>
                   <span className="font-semibold text-xs sm:text-sm mt-1">Two Wheelers</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2">
-                    <img src={truck} alt="Trucks" className="w-24 h-24 object-contain" />
+                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2 hover:scale-105 transition-transform">
+                    <img src={truck} alt="Trucks" className="w-20 h-20 sm:h-24 object-cover" />
                   </div>
                   <span className="font-semibold text-xs sm:text-sm mt-1">Trucks</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2">
-                    <img src={packers} alt="Packers & Movers" className="w-24 h-24 object-contain" />
+                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2 hover:scale-105 transition-transform">
+                    <img src={packers} alt="Packers & Movers" className="w-20 h-20 sm:h-24 object-cover" />
                   </div>
                   <span className="font-semibold text-xs sm:text-sm mt-1">Packers & Movers</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2">
-                    <img src={courier} alt="Intercity Courier Service" className="w-24 h-24 object-contain" />
+                  <div className="bg-[#f4f7fe] rounded-xl p-2 sm:p-4 flex items-center justify-center mb-2 hover:scale-105 transition-transform">
+                    <img src={courier} alt="Intercity Courier Service" className="w-20 h-20 sm:h-22 object-cover" />
                   </div>
                   <span className="font-semibold text-xs sm:text-sm mt-1 text-center">Intercity Courier<br />Service</span>
                 </div>
               </div>
               {/* Estimate Button */}
-              <div className="flex flex-col items-center justify-center w-full md:w-auto">
-                <button className="bg-[#0057ff] text-white rounded-xl px-6 py-6 sm:py-8 flex flex-col items-start shadow-lg hover:bg-blue-700 transition-all  w-full md:w-[120px] text-center">
+              <div className="flex flex-col items-center justify-center w-full md:w-auto mt-6 md:mt-0">
+                <button className="bg-[#0057ff] text-white rounded-2xl px-4 py-4 sm:py-5 flex flex-col items-start shadow-lg hover:bg-blue-700 transition-all w-full md:w-[120px] text-left hover:scale-105 hover:shadow-2xl">
                   <span className="font-bold text-base sm:text-lg">Get an estimate</span>
                   <span className="text-xs text-white/80 mt-1 mb-2">(takes ~2 mins)</span>
-                  <span className="text-2xl ml-auto mt-2">→</span>
+                  <span className="text-2xl mt-2">→</span>
                 </button>
               </div>
             </div>

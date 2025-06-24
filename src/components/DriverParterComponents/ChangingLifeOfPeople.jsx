@@ -26,9 +26,9 @@ const testimonials = [
 
 const ChangingLifeOfPeople = () => {
   return (
-    <div className="bg-[#070c13] text-white py-16">
+    <div className="bg-[#070c13] text-white py-20">
       <div className="container mx-auto text-center px-4">
-        <h2 className="text-3xl font-bold mb-12">CHANGING LIFE OF PEOPLE</h2>
+        <h2 className="text-xl font-bold mb-20 leading-tight">CHANGING LIFE OF PEOPLE</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
             <div key={i} className="flex flex-col items-center">
