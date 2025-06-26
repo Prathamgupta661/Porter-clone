@@ -12,18 +12,29 @@ const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 const OurClients = () => {
   return (
-    <div className="bg-white py-12">
-      <h2 className="text-2xl font-bold text-center mb-8">Our Clients</h2>
-      <div className="flex flex-wrap justify-center items-center gap-10 px-4">
-        {logos.map((logo, idx) => (
-          <img
-            key={idx}
-            src={logo}
-            alt={`Client ${idx + 1}`}
-            className="h-20 object-contain"
-          />
-        ))}
+    <div className="bg-white py-20 overflow-hidden">
+      <h2 className="text-2xl font-bold text-center mb-20">Our Clients</h2>
+      <div className="relative w-full">
+        <div className="flex gap-16 animate-scroll-x whitespace-nowrap items-center">
+          {[...logos, ...logos].map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo}
+              alt={`Client ${idx + 1}`}
+              className="h-20 object-contain inline-block mx-4"
+            />
+          ))}
+        </div>
       </div>
+      <style>{`
+        @keyframes scroll-x {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-x {
+          animation: scroll-x 18s linear infinite;
+        }
+      `}</style>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
-
+import supportCard from "../assets/support_card.svg";
 const supportData = [
   {
     title: "CUSTOMER SUPPORT",
-    img: "/assets/support-customer.svg", // Replace with your asset path
+    img: supportCard, // Use the same SVG for all cards
     content: (
       <>
         <a href="#" className="text-blue-700 font-semibold underline">Click here</a> to read our FAQs<br />
@@ -15,7 +15,7 @@ const supportData = [
   },
   {
     title: "PACKERS AND MOVERS",
-    img: "/assets/support-packers.svg", // Replace with your asset path
+    img: supportCard, // Use the same SVG for all cards
     content: (
       <>
         For queries and support regarding your house shifting booking, email us at{" "}
@@ -27,7 +27,7 @@ const supportData = [
   },
   {
     title: "ENTERPRISE SERVICES",
-    img: "/assets/support-enterprise.svg", // Replace with your asset path
+    img: supportCard, // Use the same SVG for all cards
     content: (
       <>
         If you are an enterprise and are looking for goods transportation services for your business,{" "}
@@ -38,7 +38,7 @@ const supportData = [
   },
   {
     title: "DRIVE WITH PORTER",
-    img: "/assets/support-drive.svg", // Replace with your asset path
+    img: supportCard, // Use the same SVG for all cards
     content: (
       <>
         Have a mini truck or bike? Earn money by fulfilling transportation orders assigned by Porter.{" "}

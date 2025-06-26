@@ -42,10 +42,10 @@ const cities = [
 
 const TransformingCities = () => {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-20 bg-white">
       <div className="container mx-auto text-center px-4">
-        <h2 className="text-3xl font-bold mb-4">WE ARE TRANSFORMING CITIES</h2>
-        <p className="max-w-4xl mx-auto text-gray-600 mb-12">
+        <h2 className="text-3xl font-bold mb-10">WE ARE TRANSFORMING CITIES</h2>
+        <p className="max-w-4xl mx-auto text-gray-600 mb-20">
           Our business is growing by the minute! We are now present in 21+ cities and have an extensive fleet base of more than 7.5L driver-partners! We have established ourselves as a trusted goods transportation service provider for big or small businesses, eCommerce merchants, supermarkets, kirana store owners and many more for their business goods transportation services. Our loyal customers across 21+ cities serve as a testament of our top notch service and ever expanding presence.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

@@ -16,100 +16,175 @@ const domesticCities = [
 ];
 
 const socialIcons = [
-  { icon: 'fa-brands fa-facebook-f', link: '#' },
-  { icon: 'fa-brands fa-x-twitter', link: '#' },
-  { icon: 'fa-brands fa-instagram', link: '#' },
-  { icon: 'fa-brands fa-linkedin-in', link: '#' },
-  { icon: 'fa-brands fa-youtube', link: '#' },
+  { icon: '📘', name: 'Facebook', link: '#' },
+  { icon: '🐦', name: 'Twitter', link: '#' },
+  { icon: '📷', name: 'Instagram', link: '#' },
+  { icon: '💼', name: 'LinkedIn', link: '#' },
+  { icon: '📺', name: 'YouTube', link: '#' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-10 pb-4">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10">
-        {/* Left: Logo, Social, App Download */}
-        <div className="md:w-1/4 flex flex-col items-start">
-          <img
-            src="https://dom-website-prod-cdn-web.porter.in/public/images/common/porter-logo-v3-white.svg"
-            alt="Porter Logo"
-            className="h-8 mb-6"
-          />
-          <hr className="border-gray-700 w-full mb-4" />
-          <div className="mb-4">
-            <span className="font-semibold">Follow us on</span>
-            <div className="flex gap-3 mt-2">
-              {socialIcons.map((s, i) => (
-                <a key={i} href={s.link} className="text-2xl hover:text-yellow-400 transition">
-                  <i className={s.icon}></i>
-                </a>
-              ))}
+    <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white pt-16 pb-8 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Left: Logo, Social, App Download */}
+          <div className="lg:w-1/3 flex flex-col items-start">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold gradient-text mb-2">Porter</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                India's largest marketplace for intracity logistics. Making delivery simple, reliable, and efficient.
+              </p>
+            </div>
+
+            <div className="mb-8 w-full">
+              <h3 className="font-semibold mb-4 text-lg">Follow us on</h3>
+              <div className="flex gap-4">
+                {socialIcons.map((social, i) => (
+                  <a 
+                    key={i} 
+                    href={social.link} 
+                    className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-300 group"
+                    title={social.name}
+                  >
+                    <span className="text-lg group-hover:rotate-12 transition-transform duration-300">
+                      {social.icon}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="w-full">
+              <h3 className="font-semibold mb-4 text-lg">Download our app</h3>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center">
+                    <span className="text-white text-xl">📱</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm">Porter App</div>
+                    <div className="text-xs text-gray-300">Get instant delivery estimates</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={qr}
+                    alt="QR Code"
+                    className="w-20 h-20 bg-white p-2 rounded-lg shadow-lg"
+                  />
+                  <div className="text-xs text-gray-300">
+                    Scan QR code to download<br />
+                    <span className="text-blue-400">Available on iOS & Android</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <hr className="border-gray-700 w-full mb-4" />
-          <div className="flex items-center gap-2 mb-2">
-            <img src="https://dom-website-prod-cdn-web.porter.in/public/images/common/porter-logo-v3-blue.svg" alt="App" className="h-8" />
-            <div>
-              <div className="font-semibold text-sm">Download our app now!</div>
-              <div className="text-xs text-gray-300">Scan the QR Code to download</div>
+
+          {/* Right: Links */}
+          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="space-y-6">
+              <h3 className="font-semibold text-lg text-blue-400">Company</h3>
+              <ul className="space-y-3">
+                {companyLinks.map((link) => (
+                  <li key={link}>
+                    <a 
+                      href="#" 
+                      className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="font-semibold text-lg text-blue-400">Quick Links</h3>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link}>
+                    <a 
+                      href="#" 
+                      className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="font-semibold text-lg text-blue-400">Support</h3>
+              <ul className="space-y-3">
+                {supportLinks.map((link) => (
+                  <li key={link}>
+                    <a 
+                      href="#" 
+                      className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block text-sm"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <img
-            src={qr}
-            alt="QR Code"
-            className="w-32 h-32 bg-white p-2 rounded"
-          />
         </div>
-        {/* Right: Links */}
-        <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div>
-            <div className="font-semibold mb-2">Company</div>
-            <ul className="space-y-1">
-              {companyLinks.map((l) => (
-                <li key={l}><a href="#" className="hover:underline">{l}</a></li>
-              ))}
-            </ul>
+
+        {/* Countries Section */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <h3 className="font-semibold mb-4 text-lg text-blue-400">International Presence</h3>
+          <div className="flex flex-wrap gap-4">
+            {countries.map((country) => (
+              <span 
+                key={country}
+                className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20 hover:bg-white/20 transition-all duration-200 cursor-pointer"
+              >
+                {country}
+              </span>
+            ))}
           </div>
-          <div>
-            <div className="font-semibold mb-2">Quick Links</div>
-            <ul className="space-y-1">
-              {quickLinks.map((l) => (
-                <li key={l}><a href="#" className="hover:underline">{l}</a></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <div className="font-semibold mb-2">Support</div>
-            <ul className="space-y-1">
-              {supportLinks.map((l) => (
-                <li key={l}><a href="#" className="hover:underline">{l}</a></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <div className="font-semibold mb-2">Countries</div>
-            <ul className="space-y-1">
-              {countries.map((l) => (
-                <li key={l}><a href="#" className="hover:underline">{l}</a></li>
-              ))}
-            </ul>
+        </div>
+
+        {/* Domestic Cities */}
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <h3 className="font-semibold mb-6 text-lg text-blue-400">Domestic Cities</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {domesticCities.map((city) => (
+              <span 
+                key={city}
+                className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer text-sm hover:translate-x-1 inline-block"
+              >
+                {city}
+              </span>
+            ))}
           </div>
         </div>
       </div>
-      {/* Domestic Cities */}
-      <div className="max-w-7xl mx-auto px-4 mt-10">
-        <div className="font-semibold mb-2">Domestic Cities</div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 text-sm">
-          {domesticCities.map((city) => (
-            <span key={city}>{city}</span>
-          ))}
+
+      {/* Bottom section */}
+      <div className="mt-12 pt-8 border-t border-gray-800 relative z-10">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center">
+            <p className="text-gray-400 text-sm mb-2">
+              &copy; {new Date().getFullYear()} Porter Clone. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-xs">
+              Built with ❤️ for better logistics experience
+            </p>
+          </div>
         </div>
       </div>
-      <hr className="border-gray-700 my-6" />
-      <div className="text-center text-xs text-gray-400">
-        &copy; {new Date().getFullYear()} Porter Clone. All rights reserved.
-      </div>
-      {/* FontAwesome CDN for icons (add in your public/index.html if not already) */}
-      {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> */}
     </footer>
   );
 }

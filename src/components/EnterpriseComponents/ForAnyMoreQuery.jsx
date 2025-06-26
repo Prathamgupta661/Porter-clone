@@ -3,8 +3,8 @@ import truckImg from "../../assets/Enterprises/enterprise_query.svg";
 
 const ForAnyMoreQuery = () => {
   return (
-    <div className="py-16 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-8">
+    <div className="py-20 bg-white">
+      <h2 className="text-3xl font-bold text-center mb-20">
         FOR ANY MORE QUERY
       </h2>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center rounded-xl shadow-lg bg-white p-8 md:p-16">

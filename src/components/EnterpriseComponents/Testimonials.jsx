@@ -20,9 +20,9 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="bg-black text-white py-16">
+    <div className="bg-black text-white py-20">
       <div className="container mx-auto text-center px-4">
-        <h2 className="text-3xl font-bold mb-12">SOME WORDS FROM OUR HAPPY CUSTOMERS</h2>
+        <h2 className="text-3xl font-bold mb-20">SOME WORDS FROM OUR HAPPY CUSTOMERS</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="flex flex-col items-center md:items-start text-center md:text-left">
