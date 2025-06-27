@@ -13,9 +13,9 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <CitiesSection />
-      {/* <TestimonialsSection />
+      <TestimonialsSection />
       <NewsSection />
-      <FAQSection /> */}
+      <FAQSection /> 
     </>
   );
 }
