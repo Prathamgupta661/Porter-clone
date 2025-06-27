@@ -11,7 +11,7 @@ import PartnersTrust from "../components/HomeComponents/PartnersTrust";
 export default function Home() {
   return (
     <>
-      <WelcomeBanner />
+    <WelcomeBanner />
       <UniqueFeatures />
       <HowItWorks />
       <CityGallery />
@@ -19,6 +19,7 @@ export default function Home() {
       <CustomerStories />
       <LatestUpdates />
       <HelpCenter />
+      
     </>
   );
 }
