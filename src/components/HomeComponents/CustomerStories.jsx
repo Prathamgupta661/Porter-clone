@@ -1,25 +1,22 @@
 import React from "react";
-import pr1 from '../../assets/pr1.png';
-import pr2 from '../../assets/pr2.png';
-import pr3 from '../../assets/pr3.png';
 
 const stories = [
   {
     name: 'Aarav',
-    avatar: pr1,
-    quote: 'MoveEase made my shifting day a breeze! Friendly helpers and no stress.',
+    avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
+    quote: 'MoveEasy made my shifting day a breeze! Friendly helpers and no stress.',
     rating: 5
   },
   {
     name: 'Priyanshu',
-    avatar: pr2,
+    avatar: 'https://randomuser.me/api/portraits/men/76.jpg',
     quote: 'Loved the app! Booking was super easy and the team was on time.',
     rating: 5
   },
   {
     name: 'Rohan',
-    avatar: pr3,
-    quote: 'I never thought moving could be this fun. Highly recommend MoveEase!',
+    avatar: 'https://randomuser.me/api/portraits/men/77.jpg',
+    quote: 'I never thought moving could be this fun. Highly recommend MoveEasy!',
     rating: 5
   }
 ];
@@ -48,7 +45,7 @@ const CustomerStories = () => (
                 <img 
                   src={story.avatar} 
                   alt={story.name} 
-                  className="w-20 h-20 rounded-full border-4 border-[var(--secondary-color)]/30 group-hover:border-[var(--primary-color)]/50 transition-all duration-300" 
+                  className="w-20 h-20 rounded-full border-4 border-[var(--secondary-color)]/30 group-hover:border-[var(--primary-color)]/50 transition-all duration-300 object-cover" 
                 />
                 <div className="absolute -top-2 -right-2 bg-[var(--secondary-color)] text-[var(--white)] rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
                   ★

@@ -1,20 +1,18 @@
 import React from "react";
-import payments from '../../assets/Enterprises/Payments.png';
-import business from '../../assets/Enterprises/Business.png';
 
 const updates = [
   {
     date: '2024-06-01',
-    title: 'MoveEase App Launch',
+    title: 'MoveEasy App Launch',
     desc: 'Our brand new app is live! Manage your moves, track helpers, and more—all in one place.',
-    icon: payments,
+    icon: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=128&q=80', // app/tech
     category: 'Product Launch'
   },
   {
     date: '2024-05-20',
     title: 'Partner Program Expanded',
     desc: 'We now have verified partners in 20+ cities. Find a helper near you!',
-    icon: business,
+    icon: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=128&q=80', // business/expansion
     category: 'Expansion'
   }
 ];
@@ -29,7 +27,7 @@ const LatestUpdates = () => (
 
     <div className="max-w-4xl mx-auto px-4 relative z-10">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Latest Updates</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text p-2">Latest Updates</h2>
         <p className="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto">
           Stay updated with our latest features, expansions, and improvements.
         </p>
@@ -40,7 +38,7 @@ const LatestUpdates = () => (
           <div key={i} className="group bg-[var(--white)] rounded-3xl shadow-lg p-8 border-l-8 border-[var(--primary-color)] hover:border-[var(--secondary-color)] transition-all duration-300 card-hover">
             <div className="flex items-start gap-6">
               <div className="bg-[var(--primary-bg)] rounded-2xl p-4 shadow-md group-hover:shadow-lg transition-shadow duration-300">
-                <img src={u.icon} alt={u.title} className="w-16 h-16 rounded-lg" />
+                <img src={u.icon} alt={u.title} className="w-16 h-16 rounded-lg object-cover" />
               </div>
               
               <div className="flex-1">

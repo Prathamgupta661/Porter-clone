@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import supportCard from '../../assets/support_card.svg';
+import { LifeBuoy } from 'lucide-react';
 
 const faqs = [
   "How do I book a move?",
@@ -15,7 +15,7 @@ const HelpCenter = () => {
   return (
     <section className="help-center py-16 bg-gradient-to-br from-blue-50 to-green-50">
       <div className="max-w-2xl mx-auto px-4 flex flex-col items-center">
-        <img src={supportCard} alt="Help" className="w-20 h-20 mb-6" />
+        <LifeBuoy className="w-20 h-20 mb-6 text-green-600" />
         <h2 className="text-3xl font-bold text-center mb-4 text-green-700">Need Help?</h2>
         <p className="text-gray-700 mb-6 text-center">Find answers to common questions or reach out to our support team.</p>
         <input

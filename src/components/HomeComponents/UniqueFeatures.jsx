@@ -1,27 +1,24 @@
 import React from "react";
-import supportCard from '../../assets/support_card.svg';
-import qr from '../../assets/qr.png';
-import pr1 from '../../assets/pr1.png';
-import reactLogo from '../../assets/react.svg';
+import { Headset, Smartphone, BadgeCheck, Cpu } from 'lucide-react';
 
 const features = [
   {
-    icon: supportCard,
+    icon: <Headset className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "24/7 Friendly Support",
     desc: "Our team is always here to help, no matter the hour."
   },
   {
-    icon: qr,
+    icon: <Smartphone className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Easy App Access",
     desc: "Scan and go! Manage your moves with our intuitive app."
   },
   {
-    icon: pr1,
+    icon: <BadgeCheck className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Verified Partners",
     desc: "All helpers are background-checked and rated by users."
   },
   {
-    icon: reactLogo,
+    icon: <Cpu className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Powered by Tech",
     desc: "Smart algorithms for the smoothest experience."
   }
@@ -37,7 +34,7 @@ const UniqueFeatures = () => (
 
     <div className="max-w-7xl mx-auto px-4 relative z-10">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Why Choose MoveEase?</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Why Choose MoveEasy?</h2>
         <p className="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto">
           Discover what makes us different and why thousands of customers trust us with their moves.
         </p>
@@ -46,8 +43,8 @@ const UniqueFeatures = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((f, i) => (
           <div key={i} className="group bg-gradient-to-br from-[var(--primary-bg)] to-[var(--white)] rounded-3xl shadow-lg p-8 border border-[var(--primary-color)]/10 hover:border-[var(--secondary-color)]/30 transition-all duration-300 card-hover">
-            <div className="bg-[var(--white)] rounded-2xl p-4 mb-6 shadow-md group-hover:shadow-lg transition-shadow duration-300">
-              <img src={f.icon} alt={f.title} className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300" />
+            <div className="bg-[var(--white)] rounded-2xl p-4 mb-6 shadow-md group-hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+              {f.icon}
             </div>
             <h3 className="text-xl font-bold text-[var(--primary-color)] mb-4 text-center group-hover:text-[var(--secondary-color)] transition-colors duration-300">
               {f.title}

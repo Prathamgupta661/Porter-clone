@@ -1,26 +1,24 @@
 import React from "react";
-import qr from '../../assets/qr.png';
-import pr1 from '../../assets/pr1.png';
-import pr2 from '../../assets/pr2.png';
+import { Download, CalendarCheck, UserCheck, LocateFixed } from 'lucide-react';
 
 const steps = [
   {
-    icon: qr,
+    icon: <Download className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Download the App",
-    desc: "Get started by downloading MoveEase from the app store."
+    desc: "Get started by downloading MoveEasy from the app store."
   },
   {
-    icon: pr1,
+    icon: <CalendarCheck className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Book Your Move",
     desc: "Choose your service, set your locations, and book instantly."
   },
   {
-    icon: pr2,
+    icon: <UserCheck className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Meet Your Helper",
     desc: "A friendly, verified partner arrives to assist you."
   },
   {
-    icon: qr,
+    icon: <LocateFixed className="w-16 h-16 mx-auto text-[var(--primary-color)] group-hover:text-[var(--secondary-color)] transition-colors duration-300" />,
     title: "Track & Relax",
     desc: "Track your move in real-time and enjoy a stress-free experience."
   }
@@ -32,14 +30,14 @@ const HowItWorks = () => (
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">How It Works</h2>
         <p className="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
-          Moving is easy with MoveEase. Just follow these simple steps!
+          Moving is easy with MoveEasy. Just follow these simple steps!
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {steps.map((step, i) => (
           <div key={i} className="group bg-[var(--white)] rounded-3xl shadow-lg p-8 border-2 border-[var(--primary-color)]/10 hover:border-[var(--secondary-color)]/30 transition-all duration-300 card-hover flex flex-col items-center">
-            <div className="bg-[var(--primary-bg)] rounded-2xl p-4 mb-6 shadow-md group-hover:shadow-lg transition-shadow duration-300">
-              <img src={step.icon} alt={step.title} className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300" />
+            <div className="bg-[var(--primary-bg)] rounded-2xl p-4 mb-6 shadow-md group-hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+              {step.icon}
             </div>
             <h3 className="text-xl font-bold text-[var(--primary-color)] mb-4 text-center group-hover:text-[var(--secondary-color)] transition-colors duration-300">
               {step.title}
