@@ -26,7 +26,7 @@ const Navbar = () => {
         <NavLink to="/" className="group">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
-              Porter
+              MoveEase
             </h1>
           </div>
         </NavLink>

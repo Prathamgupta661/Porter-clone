@@ -1,61 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import SectionHeading from './SectionHeading';
+import business from '../assets/Enterprises/Business.png';
+import api from '../assets/Enterprises/enterprise_query.svg';
+import bike from '../assets/bike.webp';
+import truck from '../assets/truck.webp';
+import packers from '../assets/sofa.webp';
+import courier from '../assets/allindia.webp';
+import bulk from '../assets/Enterprises/Trip.png';
+import express from '../assets/Enterprises/Payments.png';
 
 const services = [
   {
     tag: 'Porter Enterprise',
     title: 'Streamlining operations to drive business growth',
     gradient: 'bg-gradient-to-br from-[#b224ef] via-[#7579ff] to-[#21d4fd]',
-    icon: '🏢',
+    icon: business,
     description: 'Enterprise solutions for seamless logistics'
   },
   {
     tag: 'API Integration',
     title: 'Automate the transportation of your goods by integrating our APIs',
     gradient: 'bg-gradient-to-br from-[#11998e] via-[#38ef7d] to-[#43cea2]',
-    icon: '🔌',
+    icon: api,
     description: 'Seamless integration for your business'
   },
   {
     tag: 'Two Wheelers',
     title: 'Reliable goods transportation services for up to 20 kg',
     gradient: 'bg-gradient-to-br from-[#b224ef] via-[#7579ff] to-[#21d4fd]',
-    icon: '🛵',
+    icon: bike,
     description: 'Quick and efficient delivery'
   },
   {
     tag: 'Trucks',
     title: 'Hassle-free goods transportation up to 2500 kg',
     gradient: 'bg-gradient-to-br from-[#2193b0] via-[#6dd5ed] to-[#b224ef]',
-    icon: '🚛',
+    icon: truck,
     description: 'Heavy load transportation'
   },
   {
     tag: 'Packers & Movers',
     title: 'House shifting hai? Ho Jayega!',
     gradient: 'bg-gradient-to-br from-[#b224ef] via-[#7579ff] to-[#21d4fd]',
-    icon: '📦',
+    icon: packers,
     description: 'Complete relocation services'
   },
   {
     tag: 'Intercity Courier',
     title: 'Send parcels across India to 19000+ pincodes',
     gradient: 'bg-gradient-to-br from-[#43cea2] via-[#185a9d] to-[#b224ef]',
-    icon: '📮',
+    icon: courier,
     description: 'Nationwide delivery network'
   },
   {
     tag: 'Bulk Orders',
     title: 'Smart solutions for bulk transportation and distribution',
     gradient: 'bg-gradient-to-br from-[#ff512f] via-[#dd2476] to-[#b224ef]',
-    icon: '📋',
+    icon: bulk,
     description: 'Large scale logistics'
   },
   {
     tag: 'Express Delivery',
     title: 'Fastest delivery for urgent consignments',
     gradient: 'bg-gradient-to-br from-[#1fa2ff] via-[#12d8fa] to-[#a6ffcb]',
-    icon: '⚡',
+    icon: express,
     description: 'Priority delivery service'
   },
 ];
@@ -106,14 +114,14 @@ const ServicesSection = () => {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className={`min-w-[360px] max-w-xs h-[320px] rounded-3xl p-8 flex flex-col justify-between shadow-xl text-white relative ${service.gradient} card-hover group ${
+              className={`min-w-[360px] max-w-xs h-[340px] rounded-3xl p-8 flex flex-col justify-between shadow-xl text-white relative ${service.gradient} card-hover group ${
                 isVisible ? 'animate-slide-in-up' : ''
               }`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               {/* Floating icon */}
-              <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity duration-300">
-                {service.icon}
+              <div className="absolute top-6 right-6 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
+                <img src={service.icon} alt={service.tag} className="w-12 h-12 object-contain" />
               </div>
 
               {/* Tag */}

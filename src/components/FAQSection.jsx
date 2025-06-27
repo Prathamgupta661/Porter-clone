@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading';
 const faqs = [
   {
     question: "What is Porter App?",
-    answer: "Porter is a leading logistics service provider offering a wide range of transportation solutions. With operations across 22 Indian cities, Porter makes deliveries quick and effortless.",
+    answer: "Porter is a leading logistics service provider offering a wide range of transportation solutions. With operations across 22 Indian cities, Porter makes deliveries quick and effortless. You can book trucks, two-wheelers, packers & movers, and intercity courier services for business or personal needs.",
     icon: "🚚"
   },
   {
@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "What are the charges for goods transportation services?",
     answer: "The charges are based on the number of kilometres travelled and the type of vehicle chosen, and this differs from locality to locality. You can check the estimate tab on the Porter website to get an exact idea of your final fare amount.",
-    icon: "💰"
+    icon: "💸"
   },
   {
     question: "Does Porter provide Packers and Movers services?",

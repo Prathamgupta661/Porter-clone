@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import india from '../assets/india.webp';
+import delhi from '../assets/Enterprises/Delhi.webp';
+import mumbai from '../assets/Enterprises/Mumbai.webp';
+import bangalore from '../assets/Enterprises/Bangalore.webp';
+import hyderabad from '../assets/Enterprises/Hyderabad.webp';
+import chennai from '../assets/Enterprises/Chennai.webp';
+import pune from '../assets/Enterprises/Pune.webp';
+import ahmedabad from '../assets/Enterprises/Ahmedabad.webp';
+import surat from '../assets/Enterprises/Surat.webp';
+import kolkata from '../assets/Enterprises/Kolkata.webp';
 
 const stats = [
   { value: '21+', label: 'Indian Cities', icon: '🏙️' },
@@ -8,9 +17,15 @@ const stats = [
 ];
 
 const cities = [
-  'Delhi NCR', 'Bengaluru', 'Mumbai', 'Hyderabad', 'Ahmedabad', 'Jaipur', 'Pune', 'Kolkata', 'Surat', 'Chennai',
-  'Coimbatore', 'Indore', 'Nagpur', 'Chandigarh', 'Lucknow', 'Vadodara', 'Ludhiana', 'Kochi', 'Nashik', 'Kanpur',
-  'Trivandrum', 'Vizag'
+  { name: 'Delhi NCR', img: delhi },
+  { name: 'Mumbai', img: mumbai },
+  { name: 'Bengaluru', img: bangalore },
+  { name: 'Hyderabad', img: hyderabad },
+  { name: 'Chennai', img: chennai },
+  { name: 'Pune', img: pune },
+  { name: 'Ahmedabad', img: ahmedabad },
+  { name: 'Surat', img: surat },
+  { name: 'Kolkata', img: kolkata },
 ];
 
 const CitiesSection = () => {
@@ -92,8 +107,6 @@ const CitiesSection = () => {
                 </div>
                 <div className="text-gray-300 text-lg font-medium">{stat.label}</div>
               </div>
-              
-              {/* Hover effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
@@ -105,43 +118,25 @@ const CitiesSection = () => {
             <h2 className="text-3xl font-bold text-white mb-4">Our Network Across India</h2>
             <p className="text-gray-400">Serving millions of customers across major cities</p>
           </div>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
+          <div className="relative flex flex-wrap justify-center gap-6">
+            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20 flex-1 min-w-[320px] max-w-[600px]">
               <img
                 src={india}
                 alt="India Map with Cities"
                 className="mx-auto rounded-2xl shadow-2xl w-full max-w-4xl hover:scale-105 transition-transform duration-500"
               />
-              
-              {/* Floating city indicators */}
-              <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-              <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-              <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-cyan-500 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+            </div>
+            <div className="flex flex-col gap-4 min-w-[220px]">
+              {cities.map((city, idx) => (
+                <div key={city.name} className="flex items-center gap-3 bg-gray-800/60 rounded-xl p-3 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 group">
+                  <img src={city.img} alt={city.name} className="w-10 h-10 rounded object-cover" />
+                  <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-base font-medium">
+                    {city.name}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-
-        {/* Enhanced City List */}
-        <div className={`text-center ${isVisible ? 'animate-fade-in' : ''}`}>
-          <h3 className="text-2xl font-bold text-white mb-6">Cities We Serve</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {cities.map((city, index) => (
-              <div
-                key={city}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-xl p-4 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 group"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
-                  {city}
-                </span>
-              </div>
-            ))}
-          </div>
-          
-          <p className="text-gray-400 mt-8 text-lg">
-            And many more cities coming soon! 🚀
-          </p>
         </div>
 
         {/* CTA Section */}

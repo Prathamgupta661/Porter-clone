@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import news1 from '../assets/Enterprises/Employee.png';
+import news2 from '../assets/Enterprises/Payments.png';
+import news3 from '../assets/Enterprises/Business.png';
 
 const newsItems = [
   {
     title: "Logistics Company Porter has launched its latest social media brand campaign 'House shifting hai? Ho Jayega', highlighting its packers and movers service offerings",
-    sourceLogo: "https://etimg.etb2bimg.com/photo/68288725.cms",
+    sourceLogo: news1,
     source: "ET BRAND EQUITY.com",
     link: "#",
     category: "Brand Campaign",
@@ -11,7 +14,7 @@ const newsItems = [
   },
   {
     title: "Porter announces INR 50 Cr ESOP liquidation scheme for current and former employees as a sign of appreciation and incentive for their growth and well-being.",
-    sourceLogo: "https://etimg.etb2bimg.com/photo/68288725.cms",
+    sourceLogo: news2,
     source: "ET BRAND EQUITY.com",
     link: "#",
     category: "Company News",
@@ -19,7 +22,7 @@ const newsItems = [
   },
   {
     title: "On-demand intra-city logistics provider Porter has raised ₹750 crore in a Series E funding round led by Tiger Global Management and Vitruvian Partners.",
-    sourceLogo: "https://etimg.etb2bimg.com/photo/68288725.cms",
+    sourceLogo: news3,
     source: "ET BRAND EQUITY.com",
     link: "#",
     category: "Funding",
